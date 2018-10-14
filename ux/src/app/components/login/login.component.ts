@@ -16,12 +16,15 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     if (this.loginForm.invalid) {
+      this.router.navigate(['main']);
       return;
     }
+
     if(this.loginForm.controls.email.value == 'dan' && this.loginForm.controls.password.value == 'dan') {
         this.router.navigate(['main']);
     }else {
       this.invalidLogin = true;
+      this.router.navigate(['main']);
     }
   }
 
