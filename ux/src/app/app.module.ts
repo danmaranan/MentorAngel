@@ -38,7 +38,8 @@ const appRoutes: Routes = [
       { path: 'activity', component: ActivityComponent },
       { path: 'match', component: MatchComponent },
       { path: 'search', component: SearchComponent},
-      { path: 'comingSoon', component: ComingSoonComponent},
+      { path: 'sendtext', component: ComingSoonComponent},
+      { path: 'chat', component: ComingSoonComponent},
       { path: 'welcome', component: WelcomeComponent}
     ]
   }, 

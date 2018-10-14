@@ -8,11 +8,11 @@
 .example-container {
   display: flex;
   flex-direction: column;
-  top: auto;
+  position: fixed;
+  top: 200px;
   bottom: 0;
   left: 0;
   right: 0;
-  flex: 1 0 auto;
 }
 
 .example-is-mobile .example-toolbar {
@@ -28,7 +28,7 @@ h1.example-app-name {
 .example-sidenav-container {
   /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
      causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
-  flex: 1 0 auto;
+  flex: 1;
 }
 
 .example-is-mobile .example-sidenav-container {
@@ -38,7 +38,7 @@ h1.example-app-name {
      padding-left: 5px;
   flex: 1 0 auto;
 }
-
+/*
 mat-side-nav {
-  top: 200px;
-}
+  top: 20px;
+}*/

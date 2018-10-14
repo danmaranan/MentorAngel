@@ -18,7 +18,7 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // Set our api routes proxy to point to spring boot server
-app.use('/server', proxy('http://localhost:8080'));
+app.use('/server', proxy('http://ec2-52-15-183-224.us-east-2.compute.amazonaws.com:8080'));
 
 // Catch all other routes and return the index file
 app.get('*', (req, res) => {

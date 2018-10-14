@@ -15,6 +15,7 @@
 </table>
 <p></p>
 
+<div *ngIf="person.totalPoints" >
 <div *ngIf="person.totalPoints == 0" >
     Congrats for just starting! 
    <p></p> <img src="/src/assets/level0.png">
@@ -40,12 +41,12 @@
 </div>
 
 <div *ngIf="person.totalPoints == 25" >
-    Your current angel level is: Angel Level 5
+    Your current angel level is: Guardian Angel!
    <p></p> <img src="/src/assets/level5.png">
 </div>
 
 <div *ngIf="person.totalPoints == 30" >
-    Your current angel level is: Angel Level 6
+    Your current angel level is: Arch Angel!
    <p></p> <img src="/src/assets/level6.png">
 </div>
-
+</div>
