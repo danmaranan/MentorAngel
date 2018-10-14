@@ -1,0 +1,106 @@
+<app-toolbar></app-toolbar>
+<form [formGroup]="personForm" (ngSubmit)="onFormSubmit()">
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="First name" formControlName="firstName" >
+    </mat-form-field>  
+  </div>
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Last/Family name" formControlName="lastName" >
+    </mat-form-field>  
+  </div>
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Alias" formControlName="alias" >
+      <mat-hint>This is used in public searches.</mat-hint>
+    </mat-form-field>  
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-select placeholder="Select Gender" formControlName="gender">
+        <mat-option value="Female">Female</mat-option>
+        <mat-option value="Male">Male</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-select placeholder="Select race" formControlName="race">
+        <mat-option value="option">American Indian or Alaska Native</mat-option>
+        <mat-option value="option">Asian</mat-option>
+        <mat-option value="option">Black or African American</mat-option>
+        <mat-option value="option">Native Hawaiian or Other Pacific Islander</mat-option>
+        <mat-option value="option">White</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-select placeholder="Select country of Origin" formControlName="countryOfOrigin">
+        <mat-option value="Argentina">Argentina</mat-option>
+        <mat-option value="Bosnia">Bosnia</mat-option>
+        <mat-option value="Canada">Canada</mat-option>
+        <mat-option value="China">China</mat-option>
+        <mat-option value="Ghana">Ghana</mat-option>
+        <mat-option value="Guatemala">Guatemala</mat-option>
+        <mat-option value="Haiti">Haiti</mat-option>
+        <mat-option value="India">India</mat-option>
+        <mat-option value="Kenya">Kenya</mat-option>
+        <mat-option value="Mexico">Mexico</mat-option>
+        <mat-option value="Nigeria">Nigeria</mat-option>
+        <mat-option value="Philippines">Philippines</mat-option>
+        <mat-option value="Spain">Spain</mat-option>
+        <mat-option value="Vietnam">Vietnam</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-checkbox formControlName="isHispanic">Hispanic</mat-checkbox>
+  </div>
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Email" formControlName="email" [errorStateMatcher]="matcher" 
+      [formControl] = "emailFormControl" >
+      <mat-error *ngIf="emailFormControl.hasError('email')">
+        Please enter a valid email address.
+      </mat-error>
+    </mat-form-field>  
+  </div>
+
+
+  <div>
+    <mat-checkbox formControlName="isContactInfoPrivate">Keep info private</mat-checkbox>
+  </div>
+
+
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Username" formControlName="userName" >
+    </mat-form-field>  
+  </div>
+  <div>
+    <mat-form-field>
+      <input matInput formControlName="password" placeholder="Enter your password">
+    </mat-form-field>
+  </div>  
+    <div>
+    <mat-form-field>                
+      <input matInput type="date" formControlName="birthDate" placeholder="Date of birth">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-select placeholder="Select User Type" formControlName="userType">
+        <mat-option value="Mentor">Mentor</mat-option>
+        <mat-option value="Mentee">Mentee</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+
+
+  <div>   
+    <button mat-raised-button>Submit</button>
+  </div>  
+</form>

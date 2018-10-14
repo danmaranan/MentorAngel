@@ -1,0 +1,39 @@
+
+<div>
+<form [formGroup]="activityFormGroup" (ngSubmit)="onFormSubmit()">
+  <div>
+    <mat-form-field fxFlex="22.5">
+      <mat-select placeholder="Select mentee" formControlName="userNameMentee">
+        <mat-option value="Diosdado Lastima">Diosdado Lastima</mat-option>
+        <mat-option value="Serafin Maranan">Serfin Maranan</mat-option>
+        <mat-option value="Jose Maranan">Jose Martin</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-select placeholder="Select Activity" formControlName="activityType">
+        <mat-option value="Shared a meal">Shared a meal</mat-option>
+        <mat-option value="Helped with employment">Helped with employement</mat-option>
+        <mat-option value="Helped Move">Helped Move</mat-option>
+        <mat-option value="Transportation">Transportation</mat-option>
+        <mat-option value="Helped with Taxes">Helped with Taxes</mat-option>
+        <mat-option value="Tutored">Tutored</mat-option>
+        <mat-option value="Helped with Chores">Helped with Chores</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>                
+      <input matInput type="date" formControlName="activityDate" placeholder="Date of Activity">
+    </mat-form-field>
+</div>
+<div>
+    <button mat-raised-button>Submit</button>
+  </div>  
+</form>
+</div>
+<app-activityList></app-activityList>
+
+
+    
